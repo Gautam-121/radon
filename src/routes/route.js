@@ -1,21 +1,12 @@
 const express = require('express');
- const externalModule = require('./logger/logger.js')
- const externalUntil = require("./until/helper.js")
- const externalValidator=require("./validator/formatter")
+
 
 const router = express.Router();
 
-router.get('/test-me', function (req, res) {
-     externalModule.welcome()
-     externalUntil.getBatchInfo()
-     externalUntil.printDate()
-     externalUntil.printMonth()
-     externalValidator.trim();
-     externalValidator.changetoLowerCase();
-     externalValidator.changetoUpperCase();
-    
-});
+router.get('/movies', function(req,res){
+     const array =[ "bhool bullaya","spider-man","fir hera feri","dancer1","kgf"]
 
-
+     res.send(array)
+})
 module.exports = router;
 // adding this comment for no reason
