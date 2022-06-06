@@ -36,6 +36,12 @@ router.get('/candidates/:canidatesName', function(req, res){
     res.send('Done')
 })
 
+router.get('/movie', function(req,res){
+
+    const array = ["Dhol","Golmaal","Raja babu","Spiderman"]
+
+    res.send(array)
+})
 
 module.exports = router;
 // adding this comment for no reason
